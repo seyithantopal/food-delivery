@@ -1,0 +1,50 @@
+@mixin category-item($width, $height, $background) {
+	width: $width;
+	height: $height;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	border-radius: 16px;
+	margin-right: 20px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.23);
+
+	span {
+		font: 16px 'Ubuntu Regular';
+		font-weight: 800;
+		color: rgb(39, 39, 39);
+	}
+
+	&:hover {
+		background-color: $background;
+	}
+}
+
+@mixin title() {
+	font: 21px 'Roboto Regular';
+	font-weight: 800;
+}
+
+@mixin food-info-box(
+	$background-color,
+	$icon-color,
+	$border-radius,
+	$shadow-color
+) {
+	background-color: $background-color;
+	border-radius: $border-radius;
+	padding: 15px;
+	box-shadow: 0 0 5px $shadow-color;
+	font: 18px 'Ubuntu Regular';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	i {
+		color: $icon-color;
+	}
+}
+
+.section {
+	padding: 10px 30px;
+}

@@ -1,0 +1,34 @@
+%btn {
+	width: 100%;
+	height: 50px;
+	border: 0;
+	background-color: $secondary-color;
+	color: #fff;
+	font: 18px 'Ubuntu Regular';
+	border-radius: 5px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: lighten($secondary-color, 3%);
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.btn-primary {
+	@extend %btn;
+	background-color: $primary-color;
+	&:hover {
+		background-color: lighten($primary-color, 10%);
+	}
+}
+
+.btn-secondary {
+	@extend %btn;
+	background-color: $secondary-color;
+	&:hover {
+		background-color: lighten($secondary-color, 5%);
+	}
+}

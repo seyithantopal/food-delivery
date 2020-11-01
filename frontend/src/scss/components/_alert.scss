@@ -1,0 +1,44 @@
+%alert {
+	visibility: hidden;
+	opacity: 0;
+	width: 80%;
+	height: 50px;
+	position: fixed;
+	top: 2rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 5px;
+	font: 16px $font-family;
+	transition: visibility 0s, opacity 0.2s;
+	line-height: 1.6;
+	z-index: 8;
+
+	&.active {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.alert-primary {
+	@extend %alert;
+	background-color: $alert-primary-color;
+	color: #fff;
+}
+
+.alert-success {
+	@extend %alert;
+	background-color: $alert-success-color;
+	color: #fff;
+}
+
+.alert-danger {
+	@extend %alert;
+	background-color: $alert-danger-color;
+	color: #fff;
+}

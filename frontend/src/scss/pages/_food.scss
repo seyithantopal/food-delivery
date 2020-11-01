@@ -1,0 +1,167 @@
+.food-image {
+	width: 100%;
+	height: 300px;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.food-rank {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: -30px;
+
+	.food-star {
+		width: 100px;
+		@include food-info-box(#fff, $star-color, 50px, rgba(0, 0, 0, 0.23));
+
+		i {
+			padding-right: 10px;
+		}
+	}
+
+	.food-heart {
+		@include food-info-box(#ff545a, #fff, 50%, #f87175);
+
+		i {
+			cursor: pointer;
+		}
+	}
+}
+
+.price {
+	/*background-color: red;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	&-price {
+		font: 24px 'Ubuntu Regular';
+		color: $cost-color;
+		font-weight: 800;
+
+		.dollar-sign {
+			font-size: 17px;
+		}
+	}
+
+	&-quantity {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100px;
+		padding: 10px;
+		border-radius: 10px;
+		border: 1px solid #e4e1e1;
+		font: 21px 'Ubuntu Regular';
+		color: #383636;
+		font-weight: 800;
+
+		span:nth-child(1),
+		span:nth-child(3) {
+			cursor: pointer;
+			user-select: none;
+		}
+	}
+}
+
+.about {
+	&-title {
+		@include title();
+	}
+
+	&-description {
+		font: 15px 'Ubuntu Regular';
+		color: #808080;
+		margin-top: 20px;
+		letter-spacing: 0.6px;
+	}
+}
+
+.comments {
+	&-title {
+		@include title();
+	}
+
+	&-comments {
+		margin-top: 20px;
+		.comment {
+			display: flex;
+			flex-direction: row;
+			position: relative;
+			margin-bottom: 25px;
+
+			&:not(:last-child)::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 0.5px;
+				background: #ddd;
+				top: 105%;
+				left: 0;
+			}
+
+			&-info {
+				margin-left: 10px;
+				.username {
+					font: 18px 'Roboto Regular';
+					font-weight: 600;
+				}
+
+				.date {
+					font: 12px 'Roboto Regular';
+					font-weight: 400;
+					font-style: italic;
+				}
+
+				.message {
+					margin-top: 15px;
+					font: 15px 'Ubuntu Regular';
+					color: #808080;
+					letter-spacing: 0.6px;
+				}
+			}
+
+			&-photo {
+				img {
+					width: 45px;
+					height: 45px;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+
+	&-send {
+		width: 100%;
+		height: 50px;
+		position: relative;
+
+		input {
+			width: 100%;
+			height: 100%;
+			font: 16px 'Ubuntu Regular';
+			padding-left: 10px;
+			padding-right: 40px;
+			border-radius: 8px;
+			border: 1px solid #b8a4a4;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		i {
+			position: absolute;
+			right: 10px;
+			top: 15px;
+			font-size: 20px;
+			color: #383636;
+		}
+	}
+}

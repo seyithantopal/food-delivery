@@ -1,0 +1,96 @@
+header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	padding: 10px 100px;
+	background-color: $header-background-color;
+
+	.logo {
+		margin-right: auto;
+
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	.nav-links {
+		display: flex;
+		list-style-type: none;
+
+		li {
+			padding: 0px 20px;
+
+			a {
+				transition: all 0.3s ease 0s;
+				text-decoration: none;
+				font: 21px 'Ubuntu Regular';
+				font-weight: 500;
+				color: $logo-color;
+
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+
+		&.active {
+			width: 100%;
+		}
+	}
+}
+
+.toggle {
+	position: fixed;
+	top: 60px;
+	right: 97px;
+
+	div.line:nth-child(1) {
+		transform: rotate(-45deg) translate(0, 0);
+	}
+
+	div.line:nth-child(3) {
+		display: none;
+		transition: all 0s ease 0s;
+	}
+
+	div.line:nth-child(2) {
+		transform: rotate(45deg) translate(-5px, -6px);
+	}
+}
+
+.hamburger {
+	cursor: pointer;
+	z-index: 2;
+	display: none;
+
+	.line {
+		width: 30px;
+		height: 3px;
+		background-color: $hamburger-color;
+		-webkit-border-radius: 20px;
+		border-radius: 20px;
+	}
+
+	&:hover .line {
+		transition: all 0.3s ease 0s;
+		background-color: $hamburger-hover-color;
+	}
+
+	.line:nth-child(2) {
+		margin: 5px 0 5px 0;
+	}
+
+	.times {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+		color: #fff;
+		z-index: 3;
+		position: fixed;
+		cursor: pointer;
+		display: none;
+	}
+}
