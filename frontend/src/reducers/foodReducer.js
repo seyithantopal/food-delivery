@@ -22,10 +22,6 @@ const foodReducer = (state = initialState, action) => {
 				loading: false,
 			};
 		case types.LOAD_FOOD_BY_ID:
-			// return state.filter((food) => food.id === parseInt(action.payload, 10));
-			// return state.map((item) => (item.id === action.payload ? action.payload : item));
-			// return [...state, ...action.payload];
-			// return { ...state, selectedFood: { ...action.payload } };
 			return { ...state, selectedFood: { ...action.payload }, loading: false };
 		case types.CREATE_FOOD:
 			return [...state, { ...action.payload }];

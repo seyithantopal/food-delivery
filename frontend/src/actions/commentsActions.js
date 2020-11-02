@@ -16,10 +16,6 @@ export const loadCommentsById = (foodId) => {
 				});
 			});
 	};
-	/* return {
-		type: types.LOAD_COMMENTS_BY_ID,
-		payload: id,
-	}; */
 };
 
 export const createComment = ({ userId, foodId, comment }) => {

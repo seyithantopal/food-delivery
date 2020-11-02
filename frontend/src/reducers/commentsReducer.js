@@ -9,16 +9,8 @@ const commentsReducer = (state = initialState.comments, action) => {
 				loading: true,
 			};
 		case types.LOAD_COMMENTS_BY_ID:
-			// return { ...state, comments: [...action.payload] };
 			return { ...state, comments: action.payload, loading: false };
 		case types.CREATE_COMMENT:
-			/* return {
-				...state,
-				comments: {
-					...state.comments,
-					comments: [...state.comments, action.payload],
-				},
-			}; */
 			return {
 				...state,
 				loading: false,
